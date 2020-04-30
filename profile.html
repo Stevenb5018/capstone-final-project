@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CRITTR - Profile</title>
+        <meta name="viewport" content="CRITTR: User Profile">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://kit.fontawesome.com/cc352f2571.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+        <header>
+            <img class="logo1" src="capston-logo-color2.png" alt="business logo 1">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a id="login" href="#">Login</a></li>
+                </ul>
+            </nav> 
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        
+            <!-- Login Pop-Up -->
+        <div id="myModal" class="modal">
+              <!-- Login content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="user-log">
+                    <div>
+                        <h3>Sign Up</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <input type="text" name="serial" placeholder="Serial Code" required><br>
+
+                        <a href="profile.html"><button>Sign Up</button></a>
+                    </div>
+                    <div>
+                        <h3>Login</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <a href="index.html"><button>Login</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- Add/Drop Member Pop Up -->
+        <div id="myModal2" class="modal2">
+        <!-- Member content -->
+            <div class="modal-content2">
+            <span class="close2">&times;</span>
+                <div>
+                    <div class="add-drop">
+                        <h4>Add or Drop Members</h4>
+                        <input type="text" name="username" placeholder="Type Username">
+                        <div>
+                            <button>Add</button>
+                            <button>Drop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+                <!-- Add Box Pop Up -->
+        <div id="myModal3" class="modal3">
+        <!-- Member content -->
+            <div class="modal-content3">
+            <span class="close3">&times;</span>
+                <div class="new-device">
+                    <h4>Add a New Device</h4>
+                    <div class="serial">
+                        <input type="text" name="Serial Code" placeholder="Type Device Serial Code Here...">
+                    </div>
+                    <div class="device-name">
+                        <input type="text" name="Device Name" placeholder="Name Device">
+                    </div>
+                    <div>
+                        <a href="profile.html"> 
+                            <button>Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+                <!-- Create New Project Pop Up -->
+        <div id="myModal4" class="modal4">
+        <!-- Member content -->
+            <div class="modal-content4">
+            <span class="close4">&times;</span>
+                <div class="new-project">
+                    <h4>Create New Project</h4>
+                    <div>
+                        <h6>Name your Project</h6>
+                        <input type="text" name="project name" placeholder="Project Name">
+                        <h6>Data Sharing</h6>
+                        <label class="radio-box2">Public
+                            <input type="radio" name="option">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <label class="radio-box2">Private
+                            <input type="radio" name="option">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <a href="profile.html"> 
+                            <button>Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                <!-- Edit Project Pop Up -->
+        <div id="myModal5" class="modal5">
+        <!-- Member content -->
+            <div class="modal-content5">
+            <span class="close5">&times;</span>
+                <div class="edit-project">
+                    <h4>Edit Project</h4>
+                    <div>
+                        <h6>Rename your Project</h6>
+                        <input type="text" name="project name" placeholder="Project Name">
+                        <h6>Data Sharing</h6>
+                        <label class="radio-box2">Public
+                            <input type="radio" name="option">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <label class="radio-box2">Private
+                            <input type="radio" name="option">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <a href="profile.html"> 
+                            <button>Delete</button>
+                        </a>
+                        <a href="profile.html"> 
+                            <button>Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+                <!-- Edit Settings Pop Up -->
+        <div id="myModal6" class="modal6">
+        <!-- Member content -->
+            <div class="modal-content6">
+            <span class="close6">&times;</span>
+                <div class="new-project">
+                    <h4>Edit Settings</h4>
+                    <div>
+                        <h6>Username</h6>
+                        <input type="text" name="username" placeholder="Username">
+                        
+                        <h6>Password</h6>
+                        <input type="text" name="password" placeholder="Password">
+                        
+                        <h6>Email</h6>
+                        <input type="text" name="email" placeholder="Email">
+                        
+                        <h6>Phone #</h6>
+                        <input type="text" name="phone#" placeholder="Phone Number">
+                        
+                        <a href="profile.html"> 
+                            <button>Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Beginning of Page Container --> 
+        <div id="container">
+         
+        <!-- Profile Start -->    
+        <div class="profile-container">    
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="user.jpg" alt="Profile Image" width="200">
+                </div>
+                <div class="profile-nav-info">
+                    <h3 class="user-name">AlexJ551</h3>
+                </div>
+            </div>
+            <div class="main-bd">
+                <div class="left-side">
+                    <div class="profile-side">
+                        <div class="user-bio">
+                            <p class="bio">
+                                Member Code: 1112-324-96 
+                            </p>
+                        </div>
+                        <div class="profile-btn">
+                            <button id="addBtn" class="addbtn">
+                                <i class="fa fa-plus"></i>
+                                Add Box
+                            </button>
+                            <button id="createBtn" class="createbtn">
+                                Create Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-side">
+                    <div class="profile-nav">
+                        <div class="tab-box">
+                            <div class="tab-items">
+                                <ul>
+                                    <li class="tablinks" onclick="openProfile(event, 'projects')" id="defaultOpen">Projects</li>
+                                    <li class="tablinks" onclick="openProfile(event, 'settings')">Settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-body">
+                        <div id="projects" class="tabcontent">
+                            <div class="add-member">
+                                <a href="project-1.html">
+                                    <h4>Project 1</h4>
+                                </a>
+                                <div>
+                                    <button id="editBtn">Edit Project</button>
+                                    <button id="myBtn">Add/Drop Member</button>
+                                </div>
+                            </div>
+                            <div class="add-member">
+                                <a href="project-2.html">
+                                    <h4>Project 2</h4>
+                                </a>
+                                <div>
+                                    <button id="editBtn2">Edit Project</button>
+                                    <button id="myBtn2">Add/Drop Member</button>
+                                </div>
+                            </div>
+                            <div class="add-member">
+                                <a href="project-3.html">
+                                    <h4>Project 3</h4>
+                                </a>
+                                <div>
+                                    <button id="editBtn3">Edit Project</button>
+                                    <button id="myBtn3">Add/Drop Member</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="settings" class="tabcontent">
+                            <div class="setting-line center">
+                                <h1>Settings</h1>
+                                <button id="settingBtn"><i class="fa fa-gear"></i></button>
+                            </div>
+                            <div class="row setting-placement">
+                                <div class="col-sm-6">
+                                    <h5>User Information</h5>
+                                    <p>Username: AlexJ551</p>
+                                    <p>Password: *********</p>
+                                    <p>Member Code: 1112-324-96</p>
+                                    <p>Email: alexj551@dukes.jmu.edu</p>
+                                    <p>Phone #: 540-223-9276</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Notifications</h5>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <h5>Notification Location</h5>
+                                    <label class="radio-box">Email
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-box">Text
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Profile End -->
+        
+        <!-- End of Page Container -->
+        </div>
+        
+        <!-- Footer Content -->    
+        <footer>
+            <div class="row contact">
+                <div class="col-sm-4">
+                    <p>Patricia Higgins</p>
+                    <p>JMU Innovation Advisor</p>
+                </div>
+                
+                <div class="col-sm-4 social">
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                
+                <div class="col-sm-4">
+                    <ul>
+                        <li style="font-weight: bold">Contact:</li>
+                        <li>higginspe@jmu.edu</li>
+                        <li>540-568-4232</li>
+                        <li>Ice House at W.Bruce St</li>
+                    </ul>
+                </div>
+            </div>    
+        </footer>
+        
+        
+        
+        <!-- Javascript for Login -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("login");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+        
+        
+        <!-- Javascript Profile -->
+        <script>
+    
+            document.getElementById("defaultOpen").click();
+
+            function openProfile(evt, profileTab) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(profileTab).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+    
+        </script>
+        
+        <!-- Add/Drop Member Pop Up -->
+        <script>
+            // Get the modal
+            var modal2 = document.getElementById("myModal2");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            var btn2 = document.getElementById("myBtn2");
+            
+            var btn3 = document.getElementById("myBtn3");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close2")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal2.style.display = "block";
+            }
+            
+            btn2.onclick = function() {
+                modal2.style.display = "block";
+            }
+            
+            btn3.onclick = function() {
+                modal2.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal2.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            } 
+        </script>
+        
+        
+                <!-- Add Box Javascript -->
+        <script>
+            // Get the modal
+            var modal3 = document.getElementById("myModal3");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("addBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close3")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal3.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal3.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal3) {
+                modal3.style.display = "none";
+              }
+            }
+        </script>
+        
+        <!-- Create New Project Pop Up -->
+        <script>
+            // Get the modal
+            var modal4 = document.getElementById("myModal4");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("createBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close4")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal4.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal4.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal4) {
+                modal4.style.display = "none";
+              }
+            }
+        </script>
+        
+        <!-- Edit Project Pop Up -->
+        <script>
+            // Get the modal
+            var modal5 = document.getElementById("myModal5");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("editBtn");
+            
+            var btn2 = document.getElementById("editBtn2");
+            
+            var btn3 = document.getElementById("editBtn3");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close5")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal5.style.display = "block";
+            }
+            
+            btn2.onclick = function() {
+                modal5.style.display = "block";
+            }
+            
+            btn3.onclick = function() {
+                modal5.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal5.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal5) {
+                    modal5.style.display = "none";
+                }
+            }
+        </script>
+        
+        <!-- Edit Settings Pop Up -->
+        <script>
+            // Get the modal
+            var modal6 = document.getElementById("myModal6");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("settingBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close6")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal6.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal6.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal6) {
+                modal6.style.display = "none";
+              }
+            }
+        </script>
+        
+        
+ 
+        
+    </body>
+</html>

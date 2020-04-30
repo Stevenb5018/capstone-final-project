@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CRITTR - Project 3</title>
+        <meta name="viewport" content="CRITTR: Project 3 Data">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://kit.fontawesome.com/cc352f2571.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+        <!-- Nav and Logo -->
+        <header>
+            <a href="index.html">
+                <img class="logo1" src="capston-logo-color2.png" alt="business logo 1">
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a id="login" href="#">Login</a></li>
+                </ul>
+            </nav> 
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        
+            <!-- Login Pop-Up -->
+        <div id="myModal" class="modal">
+              <!-- Login content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="user-log">
+                    <div>
+                        <h3>Sign Up</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <input type="text" name="serial" placeholder="Serial Code" required><br>
+
+                        <a href="profile.html"><button>Sign Up</button></a>
+                    </div>
+                    <div>
+                        <h3>Login</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <a href="index.html"><button>Login</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+                    <!-- Edit Table Pop Up -->
+        <div id="myEdit" class="modal-edit">
+        <!-- Member content -->
+            <div class="modal-content-edit">
+            <span class="close-edit">&times;</span>
+                <div class="edit-table">
+                    <h4 class="center">Edit Data</h4>
+                    <div class="row edit-select">
+                        <div class="col-sm-6">
+                            <h6>Select Row to Edit</h6>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6>Delete Row</h6>
+                            <select>
+                                <option>None</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                        <div class="row edit-row">
+                            <div class="col-sm-6">
+                                <h6>Date</h6>
+                                <input type="text" name="date" placeholder="date">
+                                <h6>Time</h6>
+                                <input type="text" name="time" placeholder="time">
+                                <h6>Weight</h6>
+                                <input type="text" name="weight" placeholder="Weight">
+                                <h6>Temperature</h6>
+                                <input type="text" name="temp." placeholder="Temp.">
+                                <h6>Humidity</h6>
+                                <input type="text" name="humidity" placeholder="Humidity">
+                            </div>
+                            <div class="col-sm-6">
+                                <h6>Length</h6>
+                                <input type="text" name="length" placeholder="Length">
+                                <h6>Genus</h6>
+                                <input type="text" name="genus" placeholder="Genus">
+                                <h6>Genus</h6>
+                                <input type="text" name="common name" placeholder="Common Name">
+                                <h6>Genus</h6>
+                                <input type="text" name="gender" placeholder="Gender">
+                            </div>
+                        </div>
+                    <a href="project-3.html">
+                        <button>Submit</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download Project Pop Up -->
+        <div id="myDown" class="modal-down">
+        <!-- Member content -->
+            <div class="modal-content-down">
+            <span class="close-down">&times;</span>
+                <div class="down-project">
+                    <h4>Download Project</h4>
+                    <div class="download-space">
+                        <h6>Select Target Downloads</h6>
+                        <label class="radio-box">Table Data
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-box">Images
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <a href="project-3.html">
+                            <button>Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Beginning of Page Container --> 
+        <div id="container">
+            
+        <!-- Project Bar --> 
+        <div class="project-row">    
+        <div class="project-container2">
+            <div>
+                <select onChange="window.location.href=this.value">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="project-1.html">Project 1</option>
+                    <option value="project-2.html">Project 2</option>
+                    <option value="project-3.html" selected>Project 3</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button id="edit">Edit</button>
+        </div>
+        <div>
+            <button id="down">Download</button>
+        </div>
+    </div>     
+             
+        <!-- Project Table3 -->
+      <div class="table-container">   
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Weight</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Length</th>
+                        <th>Genus</th>
+                        <th>Common Name</th>
+                        <th>Gender</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>03/16/20</td>
+                        <td>12:21 PM</td>
+                        <td>0.19 oz</td>
+                        <td>47°F</td>
+                        <td>87%</td>
+                        <td>2.3 in</td>
+                        <td>Microsorex</td>
+                        <td>Pygmy Shrew</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>03/17/20</td>
+                        <td>2:37 AM</td>
+                        <td>0.17 oz</td>
+                        <td>39°F</td>
+                        <td>22%</td>
+                        <td>1.9 in</td>
+                        <td>Microsorex</td>
+                        <td>Pygmy Shrew</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>03/19/20</td>
+                        <td>5:50 AM</td>
+                        <td>0.11 oz</td>
+                        <td>29°F</td>
+                        <td>49%</td>
+                        <td>1.8 in</td>
+                        <td>Mus</td>
+                        <td>Brown Mouse</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>03/21/20</td>
+                        <td>9:22 PM</td>
+                        <td>0.16 oz</td>
+                        <td>34°F</td>
+                        <td>12%</td>
+                        <td>2.1 in</td>
+                        <td>Mus Pahari</td>
+                        <td>Gairdner Shrewmouse</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>03/28/20</td>
+                        <td>10:52 AM</td>
+                        <td>0.14 oz</td>
+                        <td>35°F</td>
+                        <td>62%</td>
+                        <td>2.2 in</td>
+                        <td>Microsorex</td>
+                        <td>Pygmy Shrew</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Project Images -->
+            <div class="image-data">
+                <div class="center">
+                    <h3>Images</h3>
+                </div>
+                <div class="img-gallery">
+                    <div class="gallery">
+                        <a target="_blank" href="footage2.jpg">
+                            <img src="footage2.jpg" alt="Image of a small mouse from the OpenHouse Station" width="200" height="100">
+                        </a>
+                    </div>
+                    
+                    <div class="gallery">
+                        <a target="_blank" href="footage1.jpg">
+                            <img src="footage1.jpg" alt="Image of a small mouse from the OpenHouse Station" width="200" height="100">
+                        </a>
+                    </div>
+                    
+                    <div class="gallery">
+                        <a target="_blank" href="footage4.jpg">
+                            <img src="footage4.jpg" alt="Image of a small mouse from the OpenHouse Station" width="200" height="100">
+                        </a>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="footage3.jpg">
+                            <img src="footage3.jpg" alt="Image of a small mouse from the OpenHouse Station" width="200" height="100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+           
+        
+        
+        <!-- End of Page Container -->
+        </div>
+        
+        <!-- Footer Content -->    
+        <footer>
+            <div class="row contact">
+                <div class="col-sm-4">
+                    <p>Patricia Higgins</p>
+                    <p>JMU Innovation Advisor</p>
+                </div>
+                
+                <div class="col-sm-4 social">
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                
+                <div class="col-sm-4">
+                    <ul>
+                        <li style="font-weight: bold">Contact:</li>
+                        <li>higginspe@jmu.edu</li>
+                        <li>540-568-4232</li>
+                        <li>Ice House at W.Bruce St</li>
+                    </ul>
+                </div>
+            </div>    
+        </footer>
+        <!-- End Footer Content -->
+        
+        <!-- Javascript for Login -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("login");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+        
+        <!-- Edit Table Pop Up -->
+        <script>
+            // Get the modal
+            var modalEdit = document.getElementById("myEdit");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("edit");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close-edit")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modalEdit.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modalEdit.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modalEdit) {
+                modalEdit.style.display = "none";
+              }
+            }
+        </script>
+        
+        <!-- Download Project Pop Up -->
+        <script>
+            // Get the modal
+            var modalDown = document.getElementById("myDown");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("down");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close-down")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modalDown.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modalDown.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modalDown) {
+                modalDown.style.display = "none";
+              }
+            }
+        </script>
+        
+        
+    </body>
+</html>

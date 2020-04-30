@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CRITTR Order Form</title>
+        <meta name="viewport" content="CRITTR: Order Form">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheet.css">
+        
+    </head>
+    <body>
+        
+        <!-- Header and Nav -->
+        <header>
+            <a href="index.html">
+                <img class="logo1" src="capston-logo-color2.png" alt="business logo 1">
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a id="login" href="#">Login</a></li>
+                </ul>
+            </nav> 
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        
+        
+        
+        <!-- Login Pop-Up -->
+        <div id="myModal" class="modal">
+              <!-- Login content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="user-log">
+                    <div>
+                        <h3>Sign Up</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <input type="text" name="serial" placeholder="Serial Code" required><br>
+
+                        <a href="profile.html"><button>Sign Up</button></a>
+                    </div>
+                    <div>
+                        <h3>Login</h3>
+                        <input type="text" name="username" placeholder="Username" required><br>
+
+                        <input type="text" name="password" placeholder="Password" required><br>
+
+                        <a href="index.html"><button>Login</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+<!-- Beginning of Page Container --> 
+            
+    <!-- Order Sheet -->         
+    <div class="wrapper">
+    <div class="order-container">
+        <form>
+            <h1>
+                <i class="shipping"></i>
+                Shipping Details
+            </h1>
+            <div class="name">
+                <div>
+                    <label id="f-name">First</label>
+                    <input type="text" name="f-name">
+                </div>
+                <div>
+                    <label id="l-name">Last</label>
+                    <input type="text" name="l-name">
+                </div>
+            </div>
+            <div class="street">
+                <label id="name">Street</label>
+                <input type="text" name="address">
+            </div>
+            <div class="address-info">
+                <div>
+                    <label id="city">City</label>
+                    <input type="text" name="city">
+                </div>
+                <div>
+                    <label id="state">State</label>
+                    <select>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AR">AR</option>	
+                        <option value="AZ">AZ</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DC">DC</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="IA">IA</option>	
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="MA">MA</option>
+                        <option value="MD">MD</option>
+                        <option value="ME">ME</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MO">MO</option>	
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="NC">NC</option>	
+                        <option value="NE">NE</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NV">NV</option>
+                        <option value="NY">NY</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WI">WI</option>	
+                        <option value="WV">WV</option>
+                        <option value="WY">WY</option>
+                    </select>		
+                </div>
+                <div>
+                    <label id="zip">Zip</label>
+                    <input type="text" name="zip">
+                </div>
+            </div>
+            <h1>
+                <i class="credit-card"></i> Payment Information
+            </h1>
+            <div class="cc-num">
+                <label id="card-num">Credit Card No.</label>
+                <input type="text" name="card-num">
+            </div>
+            <div class="cc-info">
+                <div>
+                    <label id="card-exp">Exp</label>
+                    <input type="text" name="expire">
+                </div>
+                <div>
+                    <label id="ccv">CCV</label>
+                    <input type="text" name="security">
+                </div>
+            </div>
+            <div class="btns">
+                <button><a href="confirm.html">Purchase</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End of Page Container -->
+
+           
+
+        
+        
+        <!-- Javascript for Login -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("login");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+        
+    </body>
+</html>
